@@ -125,7 +125,7 @@ class App extends React.Component{
       <br/>
       CountryCode:
         <div  className="dropdownContent">
-          <input type="text" className="userInput" required autoComplete="off" onBlur={this.validateCountryCode} placeholder="Enter code.." onClick={this.openDropdown} value={this.state.countryCode} onChange={this.handleChange}/>
+          <input type="text" className="userInput" required autoComplete="off"  placeholder="Enter code.." onClick={this.openDropdown} value={this.state.countryCode} onChange={this.handleChange}/>
             <ul>
               {this.renderCountryList()}
             </ul>
