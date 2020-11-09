@@ -82,17 +82,12 @@ class App extends React.Component{
       this.setState({countryList:false})
     }
 
-    validateCountryCode=(e)=>{
-     if((Object.values(Country).includes(this.state.countryCode))===false){
-      this.setState({countryCode:''})
-      alert('Pease Enter correct Country Code')
-     }
-     this.setState({countryList:false})
-    }
-
     onSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state,'state')
+        if((Object.values(Country).includes(this.state.countryCode))===false){
+            this.setState({countryCode:''})
+            alert('Pease Enter correct Country Code')
+        }
         const obj={
           employeeName:this.state.employeeName,
           employeeType:this.state.employeeType,
